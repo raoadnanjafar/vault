@@ -3,6 +3,8 @@ import 'package:sizer/sizer.dart';
 import 'package:vault/view/screens/Home%20Screen/privacy_screen.dart';
 import 'package:vault/view/screens/Home%20Screen/protect_screen.dart';
 
+import '../Account Center/account_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -51,14 +53,19 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                           alignment: Alignment.center,
                             child: Icon(Icons.person,size: 8.h,color: Colors.white,)),
                       ),
-                      Padding(
-                        padding:  EdgeInsets.only(top: 5.h,left: 4.w),
-                        child: Text(
-                          'Account Center',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 13.sp,
-                            fontWeight: FontWeight.bold
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountScreen(),));
+                        },
+                        child: Padding(
+                          padding:  EdgeInsets.only(top: 5.h,left: 4.w),
+                          child: Text(
+                            'Account Center',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13.sp,
+                              fontWeight: FontWeight.bold
+                            ),
                           ),
                         ),
                       ),
