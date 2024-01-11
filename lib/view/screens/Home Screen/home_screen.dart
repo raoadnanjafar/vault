@@ -4,6 +4,8 @@ import 'package:vault/view/screens/Home%20Screen/privacy_screen.dart';
 import 'package:vault/view/screens/Home%20Screen/protect_screen.dart';
 
 import '../Account Center/account_screen.dart';
+import '../Setting Screen/setting_screen.dart';
+import '../Theme Screen/theme_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -79,24 +81,29 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               ),
             ),
             SizedBox(height: 3.h,),
-            Padding(
-              padding:  EdgeInsets.only(left: 4.w),
-              child: Row(
-                children: [
-                  Image(
-                    image: AssetImage('assets/setbg.png'),
-                    color: Color(0xff49568d),
-                    height: 3.h,
-                  ),
-                  SizedBox(width: 2.w,),
-                  Text(
-                    'Settings',
-                    style: TextStyle(
-                      color: Color(0xff4b5683),
-                      fontSize: 13.sp
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SettingScreen(),));
+              },
+              child: Padding(
+                padding:  EdgeInsets.only(left: 4.w),
+                child: Row(
+                  children: [
+                    Image(
+                      image: AssetImage('assets/setbg.png'),
+                      color: Color(0xff49568d),
+                      height: 3.h,
                     ),
-                  )
-                ],
+                    SizedBox(width: 2.w,),
+                    Text(
+                      'Settings',
+                      style: TextStyle(
+                        color: Color(0xff4b5683),
+                        fontSize: 13.sp
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 3.h,),
@@ -213,13 +220,18 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                 ),
                               ),
                               SizedBox(width: 6.w,),
-                              Container(
-                                height: 3.h,
-                                width: 5.w,
-                                color: Color(0xff283a68),
-                                child: Image(
-                                  image: AssetImage('assets/roborte.png'),
-                                  fit: BoxFit.cover,
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ThemeScreen(),));
+                                },
+                                child: Container(
+                                  height: 3.h,
+                                  width: 5.w,
+                                  color: Color(0xff283a68),
+                                  child: Image(
+                                    image: AssetImage('assets/roborte.png'),
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ],
