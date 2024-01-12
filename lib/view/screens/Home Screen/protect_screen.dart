@@ -3,7 +3,11 @@ import 'package:sizer/sizer.dart';
 
 import '../../../global_widget/custom_dialoge.dart';
 import '../../../global_widget/global_widget.dart';
+import '../Protect Screens/cover_screen.dart';
+import '../Protect Screens/icon_screen.dart';
+import '../Protect Screens/keyword_screen.dart';
 import '../Protect Screens/security_setting.dart';
+import '../Protect Screens/selfie_screen.dart';
 import '../Protect Screens/unlock_setting.dart';
 
 
@@ -218,10 +222,15 @@ class _ProtectScreenState extends State<ProtectScreen> {
                                     title: 'Use fingerprint',
                                   controller: _controllerFinger
                                 ),
-                                securityContainer(
-                                    image: 'assets/perrbg.png',
-                                    title: 'Intruder Selfie',
-                                    subtitle: 'Take a photo of intruders'
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => SelfieScreen(),));
+                                  },
+                                  child: securityContainer(
+                                      image: 'assets/perrbg.png',
+                                      title: 'Intruder Selfie',
+                                      subtitle: 'Take a photo of intruders'
+                                  ),
                                 ),
                               ],
                             )
@@ -280,23 +289,38 @@ class _ProtectScreenState extends State<ProtectScreen> {
                           if(index == 3 &&  isSelected==true)
                             Column(
                               children: [
-                                recommendContainer(
-                                  image: 'assets/maskbg.png',
-                                  title: 'Icon Camouflage',
-                                  subtitle: 'Disguise the AppLock icon as another icon',
-                                  controller: _controllerIcon
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => IconScreen(),));
+                                  },
+                                  child: recommendContainer(
+                                    image: 'assets/maskbg.png',
+                                    title: 'Icon Camouflage',
+                                    subtitle: 'Disguise the AppLock icon as another icon',
+                                    controller: _controllerIcon
+                                  ),
                                 ),
-                                recommendContainer(
-                                    image: 'assets/kbbg.png',
-                                    title: 'Random Keyboard',
-                                    subtitle: 'Numeric keyboard is randomly\narrange to prevent others form\npeeping to ensure password security ',
-                                    controller: _controllerKey
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => KeywordScreen(),));
+                                  },
+                                  child: recommendContainer(
+                                      image: 'assets/kbbg.png',
+                                      title: 'Random Keyboard',
+                                      subtitle: 'Numeric keyboard is randomly\narrange to prevent others form\npeeping to ensure password security ',
+                                      controller: _controllerKey
+                                  ),
                                 ),
-                                recommendContainer(
-                                    image: 'assets/eyesbg.png',
-                                    title: 'Cover',
-                                    subtitle: 'Apply cover to improve security',
-                                    controller: _controllerCover
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => CoverScreen(),));
+                                  },
+                                  child: recommendContainer(
+                                      image: 'assets/eyesbg.png',
+                                      title: 'Cover',
+                                      subtitle: 'Apply cover to improve security',
+                                      controller: _controllerCover
+                                  ),
                                 ),
                                 recommendContainer(
                                     image: 'assets/booksbg.png',

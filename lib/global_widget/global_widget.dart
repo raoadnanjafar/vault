@@ -70,11 +70,6 @@ Widget recommendContainer({
                       controller: controller,
                       activeColor: Colors.green,
                       inactiveColor: Colors.grey,
-                      // activeChild: Text('ON'),
-                      // inactiveChild: Text('OFF'),
-                      // activeImage: AssetImage('assets/images/on.png'),
-                      // inactiveImage: AssetImage('assets/images/off.png'),
-                      // borderRadius: BorderRadius.all(const Radius.circular(15)),
                       width: 9.w,
                       height: 2.h,
                       enabled: true,
@@ -156,3 +151,4 @@ Widget securityContainer({
     ],
   );
 }
+
