@@ -212,13 +212,18 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
                           Row(
                             children: [
-                              Container(
-                                height: 3.h,
-                                width: 5.w,
-                                color: Color(0xff283a68),
-                                child: Image(
-                                  image: AssetImage('assets/tajjjj.png'),
-                                  fit: BoxFit.cover,
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountScreen(),));
+                                },
+                                child: Container(
+                                  height: 3.h,
+                                  width: 5.w,
+                                  color: Color(0xff283a68),
+                                  child: Image(
+                                    image: AssetImage('assets/tajjjj.png'),
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               SizedBox(width: 6.w,),
