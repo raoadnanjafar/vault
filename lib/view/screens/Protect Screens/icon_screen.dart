@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/custom_icon_dialogue.dart';
+
 class IconScreen extends StatefulWidget {
   const IconScreen({Key? key}) : super(key: key);
 
@@ -106,30 +108,57 @@ class _IconScreenState extends State<IconScreen> {
                       'Options',
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 12.sp
+                        fontSize: 11.sp
                       ),
                     ),
                   ),
                   SizedBox(height: 1.h,),
-                  iconListTile(
-                    image: 'assets/calculator.png',
-                    title: 'Disguise as calculator',
-                    controller: _controller
+                  GestureDetector(
+                    onTap: () {
+                      customIconDialog(
+                        context: context,
+                        image: 'assets/calculator.png',
+                        text: 'Calculator',
+                      );
+                    },
+                    child: iconListTile(
+                      image: 'assets/calculator.png',
+                      title: 'Disguise as Calculator',
+                      controller: _controller
+                    ),
                   ),
                   //SizedBox(height: 1.h,),
                   Divider(thickness: 1,color: Colors.grey.shade300,),
                   SizedBox(height: 1.h,),
-                  iconListTile(
-                    image: 'assets/compass.png',
-                    title: 'Disguise as compass',
-                    controller: compassController
+                  GestureDetector(
+                    onTap: () {
+                      customIconDialog(
+                        context: context,
+                        image: 'assets/compass.png',
+                        text: 'Compass',
+                      );
+                    },
+                    child: iconListTile(
+                      image: 'assets/compass.png',
+                      title: 'Disguise as Compass',
+                      controller: compassController
+                    ),
                   ),
                   Divider(thickness: 1,color: Colors.grey.shade300,),
                   SizedBox(height: 1.h,),
-                  iconListTile(
-                      image: 'assets/level.png',
-                      title: 'Disguise as spirit level',
-                      controller: levelController
+                  GestureDetector(
+                    onTap: () {
+                      customIconDialog(
+                        context: context,
+                        image: 'assets/level.png',
+                        text: 'Spirit level',
+                      );
+                    },
+                    child: iconListTile(
+                        image: 'assets/level.png',
+                        title: 'Disguise as Spirit level',
+                        controller: levelController
+                    ),
                   ),
                   SizedBox(height: 2.h,)
                 ],

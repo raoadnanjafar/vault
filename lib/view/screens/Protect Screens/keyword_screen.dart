@@ -42,7 +42,7 @@ class _KeywordScreenState extends State<KeywordScreen> {
               child: Column(
                 children: [
                   ListTile(
-                    leading: Image(image: AssetImage('assets/kbbg.png'),width: 8.w,),
+                    leading: Image(image: AssetImage('assets/kbbg.png'),width: 8.w,color: Color(0xff48568d)),
                     title: Text(
                       'Random keyword',
                       style: TextStyle(

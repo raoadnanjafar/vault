@@ -32,6 +32,12 @@ class _SelfieScreenState extends State<SelfieScreen> {
           ),
         ),
         elevation: 0,
+        actions: [
+          Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 3.w),
+            child: Image(image: AssetImage('assets/brush.png'),color: Color(0xff49568d),height: 3.h,),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
