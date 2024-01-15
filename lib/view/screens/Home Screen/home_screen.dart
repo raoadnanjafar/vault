@@ -253,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                         controller: _controller,
                         dividerColor: Color(0xff283a68),
                         unselectedLabelColor: Colors.grey.shade200,
-                        labelPadding: EdgeInsets.only(right: 24.w,left: 18.w),
+                        //labelPadding: EdgeInsets.only(right: 24.w,left: 18.w),
                         //padding: EdgeInsets.only(left: 10.w),
                         tabs: [
                           Text(

@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../Security/security_screen.dart';
+import '../Vault View/vault_view_screen.dart';
+
 class PrivacyScreen extends StatefulWidget {
   const PrivacyScreen({Key? key}) : super(key: key);
 
@@ -104,10 +107,18 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                 child:  ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                   rowContainer(color: Color(0xffff7767),text: 'Vault',image: 'assets/cameraabg.png'),
+                   InkWell(
+                       onTap: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => vaultView(),));
+                       },
+                       child: rowContainer(color: Color(0xffff7767),text: 'Vault',image: 'assets/cameraabg.png')),
                     rowContainer(color: Color(0xff09b7ee),text: 'Browser',image: 'assets/browbg.png'),
                     rowContainer(color: Color(0xff17a1fc),text: 'Profiles',image: 'assets/starsbg.png'),
-                    rowContainer(color: Color(0xff12c875),text: 'Security',image: 'assets/secbg.png'),
+                    InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => SecurityScreen(),));
+                        },
+                        child: rowContainer(color: Color(0xff12c875),text: 'Security',image: 'assets/secbg.png')),
                     rowContainer(color: Color(0xff3be37d),text: 'Clean',image: 'assets/fanbg.png'),
                     rowContainer(color: Color(0xffff6d19),text: 'Games',image: 'assets/gambg.png'),
                   ],
