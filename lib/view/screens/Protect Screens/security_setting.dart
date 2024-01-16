@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
 import '../../../global_widget/global_textfield.dart';
 
 class SecuritySettingScreen extends StatefulWidget {
@@ -23,7 +24,8 @@ class _SecuritySettingScreenState extends State<SecuritySettingScreen> {
     return Scaffold(
       backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -55,7 +57,8 @@ class _SecuritySettingScreenState extends State<SecuritySettingScreen> {
                     Text(
                       'Security question',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: appColor,
+                        //Colors.black,
                         fontSize: 11.sp
                       ),
                     ),
@@ -115,7 +118,8 @@ class _SecuritySettingScreenState extends State<SecuritySettingScreen> {
                     Text(
                       'Security Email',
                       style: TextStyle(
-                          color: Colors.black,
+                          color: appColor,
+                          //Colors.black,
                           fontSize: 11.sp
                       ),
                     ),
@@ -174,7 +178,8 @@ class _SecuritySettingScreenState extends State<SecuritySettingScreen> {
                             Text(
                               'Fingerprint Verification',
                               style: TextStyle(
-                                color: Colors.black,
+                                color: appColor,
+                                //Colors.black,
                                 fontSize: 12.sp
                               ),
                             ),

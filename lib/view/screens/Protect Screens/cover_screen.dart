@@ -3,6 +3,7 @@ import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
+import '../../../global_widget/app_color.dart';
 import 'cover_screens/cover_applock_screen.dart';
 import 'cover_screens/scanner_screen.dart';
 
@@ -28,7 +29,8 @@ class _CoverScreenState extends State<CoverScreen> {
     return Scaffold(
       backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -54,11 +56,17 @@ class _CoverScreenState extends State<CoverScreen> {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: Image(image: AssetImage('assets/eyesbg.png'),width: 6.w,color: Color(0xff48568d),),
+                      leading: Image(
+                        image: AssetImage('assets/eyesbg.png'),
+                        width: 6.w,
+                        color: appColor,
+                        //Color(0xff48568d),
+                      ),
                       title: Text(
                         'Cover',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: appColor,
+                          //Colors.black,
                           fontSize: 12.sp,
                           //fontWeight: FontWeight.bold
                         ),
@@ -109,7 +117,10 @@ class _CoverScreenState extends State<CoverScreen> {
                     },
                     child: CircleAvatar(
                       radius: 5,
-                      backgroundColor:activePage == index? Colors.green:Colors.grey,
+                      backgroundColor:activePage == index?
+                      appColor
+                      //Colors.green
+                          :Colors.grey,
                     ),
                   ),
                   ),),

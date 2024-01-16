@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
 import '../Profile Screen/profile_screen.dart';
 
 class PrivacyScreen extends StatefulWidget {
@@ -20,7 +21,8 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
           children: [
             Container(
               height: 3.h,
-              color: Color(0xff283a68),
+              color: Color(0xff009688),
+              //Color(0xff283a68),
             ),
             Container(
               height: 12.h,
@@ -43,13 +45,13 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                     'Recommended',
                                     style: TextStyle(
                                       color: Colors.black,
-                                      fontSize: 12.sp
+                                      fontSize: 11.sp
                                     ),
                                   ),
                                   SizedBox(width: 2.w,),
                                   Container(
                                    // height: 4.h,
-                                    width: 23.w,
+                                    //width: 20.w,
                                     decoration: BoxDecoration(
                                       color: Color(0xffccf0ee),
                                       borderRadius: BorderRadius.circular(6),
@@ -59,17 +61,17 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                         SizedBox(height: 0.3.h,),
                                         Row(
                                           children: [
-                                            SizedBox(width: 2.w,),
-                                            Icon(Icons.perm_identity,color: Color(0xff00b7a5),size: 2.8.h,),
+                                            SizedBox(width: 1.w,),
+                                            Icon(Icons.perm_identity,color: Color(0xff00b7a5),size: 2.3.h,),
                                             SizedBox(width: 1.w,),
                                             Text(
                                               '> 80%',
                                               style: TextStyle(
                                                   color: Color(0xff00b7a5),
-                                                  fontSize: 12.sp
+                                                  fontSize: 9.sp
                                               ),
                                             ),
-                                            SizedBox(width: 2.w,),
+                                            SizedBox(width: 1.w,),
                                           ],
                                         ),
                                         SizedBox(height: 0.3.h,),
@@ -99,7 +101,8 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                           'Permission Required',
                                           style: TextStyle(
                                             fontSize: 12.sp,
-                                            color: Colors.black,
+                                            color: appColor,
+                                            //Colors.black,
                                             fontWeight: FontWeight.bold
                                           ),
                                         ),
@@ -127,7 +130,11 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                                         child: Row(
                                                           crossAxisAlignment: CrossAxisAlignment.start,
                                                           children: [
-                                                            Image(image: AssetImage('assets/securityy.png'),height: 10.h,),
+                                                            Image(
+                                                              image: AssetImage('assets/securityy.png'),
+                                                              height: 10.h,
+                                                              //color: appColor,
+                                                            ),
                                                             //SizedBox(width: 2.w,),
                                                             Expanded(
                                                               child: Text(
@@ -167,7 +174,8 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                                                           height: 11.h,
                                                                           width: double.infinity,
                                                                           decoration: BoxDecoration(
-                                                                              color: Color(0xff283a68),
+                                                                              color: appColor,
+                                                                              //Color(0xff283a68),
                                                                               borderRadius: BorderRadius.only(topLeft: Radius.circular(5),topRight: Radius.circular(5))
                                                                           ),
                                                                           child: Column(
@@ -199,7 +207,8 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                                                                 TextSpan(
                                                                                   text: ' Allow AppLock to autostart.',
                                                                                   style: TextStyle(
-                                                                                      color: Color(0xff4693e2),
+                                                                                      color: appColor,
+                                                                                      //Color(0xff4693e2),
                                                                                       fontSize: 12.sp,
                                                                                       fontWeight: FontWeight.bold
                                                                                   ),
@@ -212,7 +221,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                                                         Padding(
                                                                           padding: EdgeInsets.symmetric(horizontal: 4.w),
                                                                           child: Text(
-                                                                            'The function ight not be work properly if the required permission are not enabled.',
+                                                                            'The function light not be work properly if the required permission are not enabled.',
                                                                             style: TextStyle(
                                                                               fontSize: 12.sp,
                                                                               color: Colors.black
@@ -315,7 +324,11 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                                         child: Row(
                                                           crossAxisAlignment: CrossAxisAlignment.start,
                                                           children: [
-                                                            Image(image: AssetImage('assets/securityy.png'),height: 10.h,),
+                                                            Image(
+                                                              image: AssetImage('assets/securityy.png'),
+                                                              height: 10.h,
+                                                              //color: appColor,
+                                                            ),
                                                             //SizedBox(width: 2.w,),
                                                             Expanded(
                                                               child: Text(
@@ -425,19 +438,22 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                   height: 5.5.h,
                   width: 17.w,
                   decoration: BoxDecoration(
-                      color: color,
+                      color: Colors.white,
+                      //color,
                       //Color(0xffff7767),
+                      border: Border.all(width: 1,color: Colors.grey.shade200,),
                       shape: BoxShape.circle
                   ),
                   child: Center(
-                    child: Image(image: AssetImage(image!),height: 4.5.h,),
+                    child: Image(image: AssetImage(image!),height: 4.h,color: appColor,),
                   ),
                 ),
 
                 Text(
                   text!,
                   style: TextStyle(
-                      color: Colors.black,
+                      color: appColor,
+                      //Colors.black,
                       fontSize: 11.sp
                   ),
                 )
@@ -448,6 +464,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
       ],
     );
   }
+
   Widget settingContainer({String? image,String? title, String? subTitle}){
     return Column(
       children: [
@@ -466,7 +483,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                       title!,
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 12.sp
+                          fontSize: 11.sp
                       ),
                     ),
                     SizedBox(height: 0.5.h,),
@@ -476,7 +493,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                       style: TextStyle(
                           overflow: TextOverflow.ellipsis,
                           color: Colors.grey,
-                          fontSize: 10.sp
+                          fontSize: 9.sp
                       ),
                     ),
                   ],

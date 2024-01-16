@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../../global_widget/app_color.dart';
+
 class CoverAppLockScreen extends StatefulWidget {
   const CoverAppLockScreen({Key? key}) : super(key: key);
 
@@ -51,7 +53,8 @@ class _CoverAppLockScreenState extends State<CoverAppLockScreen> {
                           child: Text(
                             'Unfortunately, AppLock has stopped.',
                             style: TextStyle(
-                                color: Colors.black,
+                                color:
+                                Colors.black,
                                 fontSize: 12.sp
                             ),
                           ),
@@ -62,7 +65,8 @@ class _CoverAppLockScreenState extends State<CoverAppLockScreen> {
                           child: Text(
                             'Ok',
                             style: TextStyle(
-                                color: Colors.green,
+                                color: appColor,
+                                //Colors.green,
                                 fontSize: 12.sp
                             ),),
                         ),
@@ -85,7 +89,8 @@ class _CoverAppLockScreenState extends State<CoverAppLockScreen> {
                     title: Text(
                       'FC',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: appColor,
+                        //Colors.black,
                         fontSize: 10.sp,
                       ),
                     ),
@@ -93,7 +98,8 @@ class _CoverAppLockScreenState extends State<CoverAppLockScreen> {
                       padding:  EdgeInsets.only(top: 4.h),
                       child: AdvancedSwitch(
                         controller: _controller,
-                        activeColor: Colors.green,
+                        activeColor: appColor,
+                        //Colors.green,
                         inactiveColor: Colors.grey,
                         width: 9.w,
                         height: 2.h,

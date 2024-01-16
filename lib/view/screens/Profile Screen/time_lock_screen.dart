@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
 import '../../../global_widget/global_textfield.dart';
 import 'add_profile_screen.dart';
 
@@ -22,7 +23,8 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
     return Scaffold(
       backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -63,7 +65,8 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
                       ),
                       trailing: AdvancedSwitch(
                         controller: _controller,
-                        activeColor: Colors.green,
+                        activeColor: appColor,
+                        //Colors.green,
                         inactiveColor: Colors.grey,
                         width: 9.w,
                         height: 2.h,
@@ -114,7 +117,8 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
                                               child: Text(
                                                 'Enable Profiles',
                                                 style: TextStyle(
-                                                    color: Colors.black,
+                                                    color: appColor,
+                                                    //Colors.black,
                                                     fontSize: 13.sp,
                                                   fontWeight: FontWeight.bold
                                                 ),
@@ -124,21 +128,33 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
                                             Divider(thickness: 1,color: Colors.grey.shade300,),
                                            // SizedBox(height: 2.h,),
                                             ListTile(
-                                              leading: Image(image: AssetImage('assets/unlock.png'),width: 5.w,color: Color(0xff283a68),),
+                                              leading: Image(
+                                                image: AssetImage('assets/unlock.png'),
+                                                width: 5.w,
+                                                color: appColor,
+                                                //Color(0xff283a68),
+                                              ),
                                               title: Text(
                                                 'Unlock All',
                                                 style: TextStyle(
-                                                  color: Colors.black,
+                                                  color: appColor,
+                                                  //Colors.black,
                                                   fontSize: 10.sp
                                                 ),
                                               ),
                                             ),
                                             ListTile(
-                                              leading: Image(image: AssetImage('assets/user.png'),width: 5.w,color: Color(0xff283a68),),
+                                              leading: Image(
+                                                image: AssetImage('assets/user.png'),
+                                                width: 5.w,
+                                                color: appColor,
+                                                //Color(0xff283a68),
+                                              ),
                                               title: Text(
                                                 'Guest',
                                                 style: TextStyle(
-                                                    color: Colors.black,
+                                                    color: appColor,
+                                                    //Colors.black,
                                                     fontSize: 10.sp
                                                 ),
                                               ),
@@ -148,11 +164,15 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
                                                 Navigator.push(context, MaterialPageRoute(builder: (context) => AddProfileScreen(),));
                                               },
                                               child: ListTile(
-                                                leading: Icon(Icons.add,color: Colors.grey.shade400,size: 3.5.h,),
+                                                leading: Icon(
+                                                  Icons.add,
+                                                  color: Colors.grey.shade400,
+                                                  size: 3.5.h,),
                                                 title: Text(
                                                   'Add New Profile',
                                                   style: TextStyle(
-                                                      color: Colors.black,
+                                                      color: appColor,
+                                                      //Colors.black,
                                                       fontSize: 10.sp
                                                   ),
                                                 ),
@@ -201,7 +221,8 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
                                   'Unlock All',
                                   style: TextStyle(
                                       fontSize: 10.sp,
-                                      color: Color(0xff00b7a5)
+                                      color: appColor,
+                                      //Color(0xff00b7a5)
                                   ),
                                 ),
                                 trailing: Icon(Icons.arrow_forward_ios_rounded,color: Color(0xffb8bac7),size: 5.w,),
@@ -217,7 +238,6 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
                                   onTap: () {
                                     isSelected = false;
                                     setState(() {
-
                                     });
                                   },
                                   child: Icon(Icons.keyboard_arrow_up_sharp,color: Color(0xffb8bac7),size: 8.w,)),
@@ -245,7 +265,8 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
                             child: Text(
                               'Never Repeat',
                               style: TextStyle(
-                                  color: Colors.grey,
+                                  color: Color(0xff005e56).withAlpha(200),
+                                  //Colors.grey,
                                   fontSize: 7.sp,
                                 fontWeight: FontWeight.bold
                               ),
@@ -269,7 +290,8 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
          // Navigator.push(context, MaterialPageRoute(builder: (context) => AddProfileScreen(),));
         },
         child: Icon(Icons.add,color: Colors.white,size: 4.h,),
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         // shape: BeveledRectangleBorder(
         //   //side: BorderSide.none,
         //     borderRadius: BorderRadius.circular(30)

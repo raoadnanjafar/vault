@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
 import '../../../global_widget/custom_icon_dialogue.dart';
 
 class IconScreen extends StatefulWidget {
@@ -21,7 +22,8 @@ class _IconScreenState extends State<IconScreen> {
     return Scaffold(
       backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -54,7 +56,12 @@ class _IconScreenState extends State<IconScreen> {
                             flex: 2,
                             child: Container(
                               child: Center(
-                                child: Image(image: AssetImage('assets/maskbg.png'),color: Color(0xff49568d),height: 3.h,),
+                                child: Image(
+                                  image: AssetImage('assets/maskbg.png'),
+                                  color: appColor,
+                                  //Color(0xff49568d),
+                                  height: 3.h,
+                                ),
                               ),
                             ),
                           ),
@@ -71,7 +78,8 @@ class _IconScreenState extends State<IconScreen> {
                                   Text(
                                    'Icon Camouflage',
                                     style: TextStyle(
-                                        color: Colors.black,
+                                        color: appColor,
+                                        //Colors.black,
                                         fontSize: 11.sp
                                     ),
                                   ),
@@ -107,7 +115,8 @@ class _IconScreenState extends State<IconScreen> {
                     child: Text(
                       'Options',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: appColor,
+                        //Colors.black,
                         fontSize: 11.sp
                       ),
                     ),
@@ -175,14 +184,16 @@ class _IconScreenState extends State<IconScreen> {
       title: Text(
         title!,
         style: TextStyle(
-            color: Colors.black,
+            color: appColor,
+            //Colors.black,
             fontSize: 12.sp,
             fontWeight: FontWeight.bold
         ),
       ),
       trailing: AdvancedSwitch(
         controller: controller,
-        activeColor: Colors.green,
+        activeColor: appColor,
+        //Colors.green,
         inactiveColor: Colors.grey,
         width: 9.w,
         height: 2.h,

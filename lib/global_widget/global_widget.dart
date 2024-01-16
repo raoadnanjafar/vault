@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 
+import 'app_color.dart';
+
 Widget recommendContainer({
   String? image,
   String? title,
@@ -27,7 +29,12 @@ Widget recommendContainer({
                 flex: 2,
                 child: Container(
                   child: Center(
-                    child: Image(image: AssetImage(image!),color: Color(0xff49568d),height: 3.5.h,),
+                    child: Image(
+                      image: AssetImage(image!),
+                      color: appColor,
+                      //Color(0xff49568d),
+                      height: 3.5.h,
+                    ),
                   ),
                 ),
               ),
@@ -44,7 +51,8 @@ Widget recommendContainer({
                       Text(
                         title!,
                         style: TextStyle(
-                            color: Colors.black,
+                            color: appColor,
+                            //Colors.black,
                             fontSize: 11.sp
                         ),
                       ),
@@ -68,7 +76,8 @@ Widget recommendContainer({
                   child: Center(
                     child: AdvancedSwitch(
                       controller: controller,
-                      activeColor: Colors.green,
+                      activeColor: appColor,
+                      //Colors.green,
                       inactiveColor: Colors.grey,
                       width: 9.w,
                       height: 2.h,
@@ -110,7 +119,12 @@ Widget securityContainer({
               flex: 2,
               child: Container(
                 child: Center(
-                  child: Image(image: AssetImage(image!),color: Color(0xff49568d),height: 3.5.h,),
+                  child: Image(
+                    image: AssetImage(image!),
+                    color: appColor,
+                    //Color(0xff49568d),
+                    height: 3.5.h,
+                  ),
                 ),
               ),
             ),
@@ -124,7 +138,8 @@ Widget securityContainer({
                     Text(
                       title!,
                       style: TextStyle(
-                          color: Colors.black,
+                          color: appColor,
+                          //Colors.black,
                           fontSize: 11.sp
                       ),
                     ),

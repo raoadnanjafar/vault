@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:vault/view/screens/Profile%20Screen/time_lock_screen.dart';
 
+import '../../../global_widget/app_color.dart';
 import 'add_profile_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -19,7 +20,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -60,11 +62,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       customDialogue(text: 'Unlock All');
                     },
                     child: ListTile(
-                      leading: Image(image: AssetImage('assets/unlock.png'),color: Color(0xff49568d),height: 2.5.h,),
+                      leading: Image(
+                        image: AssetImage('assets/unlock.png'),
+                        color: appColor,
+                        //Color(0xff49568d),
+                        height: 2.5.h,
+                      ),
                       title: Text(
                         'Unlock All',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: appColor,
+                          //Colors.black,
                           fontSize: 12.sp
                         ),
                       ),
@@ -107,11 +115,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       customDialogue(text: 'Guest');
                     },
                     child: ListTile(
-                      leading: Image(image: AssetImage('assets/user.png'),color: Color(0xff49568d),height: 2.5.h,),
+                      leading: Image(
+                        image: AssetImage('assets/user.png'),
+                        color: appColor,
+                        //Color(0xff49568d),
+                        height: 2.5.h,
+                      ),
                       title: Text(
                         'Guest',
                         style: TextStyle(
-                            color: Colors.black,
+                            color: appColor,
+                            //Colors.black,
                             fontSize: 12.sp
                         ),
                       ),
@@ -123,14 +137,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ],
                       ),
                       trailing: Padding(
-                        padding:  EdgeInsets.only(left: 4.w),
+                        padding:  EdgeInsets.only(left: 8.w),
                         child: PopupMenuButton(
                           color: Colors.grey.shade400,
-
+                          //shadowColor: Colors.grey.shade200,
+                          surfaceTintColor: Colors.white,
                           itemBuilder: (context) => [
                             PopupMenuItem(
                               child: Text(
                                 'Shortcut',
+                                style: TextStyle(
+                                    fontSize: 10.sp,
+                                    color: Colors.black
+                                ),
+                              ),
+                            ),
+                            PopupMenuItem(
+                              child: Text(
+                                'Edit',
                                 style: TextStyle(
                                     fontSize: 10.sp,
                                     color: Colors.black
@@ -153,7 +177,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Navigator.push(context, MaterialPageRoute(builder: (context) => AddProfileScreen(),));
         },
         child: Icon(Icons.add,color: Colors.white,size: 4.h,),
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         // shape: BeveledRectangleBorder(
         //   //side: BorderSide.none,
         //     borderRadius: BorderRadius.circular(30)
@@ -179,7 +204,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
               children: [
                 SizedBox(height: 2.h,),
                 Center(
-                  child: Image(image: AssetImage('assets/info.png'),color: Color(0xff31d4ff),height: 3.h,),
+                  child: Image(
+                    image: AssetImage('assets/info.png'),
+                    color: appColor,
+                    //Color(0xff31d4ff),
+                    height: 3.h,
+                  ),
                 ),
                 SizedBox(height: 2.h,),
                 Text(

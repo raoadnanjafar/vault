@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
+
 class AddProfileScreen extends StatefulWidget {
   const AddProfileScreen({Key? key}) : super(key: key);
 
@@ -15,7 +17,8 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
     return Scaffold(
       backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -32,8 +35,8 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
             decoration: InputDecoration(
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                 hintText: 'Add new profile',
-                labelStyle: TextStyle(fontSize: 10.sp,color: Colors.grey.shade300),
-                hintStyle: TextStyle(fontSize: 10.sp),
+                //labelStyle: TextStyle(fontSize: 10.sp,color: Colors.grey.shade300),
+                hintStyle: TextStyle(fontSize: 10.sp,color: Colors.grey.shade400),
                 fillColor: Colors.white,
                 filled: true,
                 contentPadding: EdgeInsets.only(left: 3.w,right: 2.w,bottom: 1.5.h),
@@ -66,13 +69,13 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
                         'Recommended',
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12.sp
+                            fontSize: 10.sp
                         ),
                       ),
                       SizedBox(width: 2.w,),
                       Container(
                         // height: 4.h,
-                        width: 23.w,
+                        //width: 23.w,
                         decoration: BoxDecoration(
                           color: Color(0xffccf0ee),
                           borderRadius: BorderRadius.circular(6),
@@ -82,17 +85,17 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
                             SizedBox(height: 0.3.h,),
                             Row(
                               children: [
-                                SizedBox(width: 2.w,),
-                                Icon(Icons.perm_identity,color: Color(0xff00b7a5),size: 2.8.h,),
+                                SizedBox(width: 1.w,),
+                                Icon(Icons.perm_identity,color: Color(0xff00b7a5),size: 2.5.h,),
                                 SizedBox(width: 1.w,),
                                 Text(
                                   '> 80%',
                                   style: TextStyle(
                                       color: Color(0xff00b7a5),
-                                      fontSize: 12.sp
+                                      fontSize: 9.sp
                                   ),
                                 ),
-                                SizedBox(width: 2.w,),
+                                SizedBox(width: 1.w,),
                               ],
                             ),
                             SizedBox(height: 0.3.h,),

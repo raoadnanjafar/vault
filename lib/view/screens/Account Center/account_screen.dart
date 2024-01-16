@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
+
 class AccountScreen extends StatefulWidget {
   const AccountScreen({Key? key}) : super(key: key);
 
@@ -14,7 +16,8 @@ class _AccountScreenState extends State<AccountScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading:  GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -35,7 +38,8 @@ class _AccountScreenState extends State<AccountScreen> {
             children: [
               Container(
                 //height: 27.h,
-                color: Color(0xff283a68),
+                color: appColor,
+                //Color(0xff283a68),
                 child: Column(
                   children: [
                     Padding(
@@ -46,18 +50,20 @@ class _AccountScreenState extends State<AccountScreen> {
                             height: 17.h,
                             width: 17.w,
                             decoration: BoxDecoration(
-                                color: Color(0xff404c88),
+                                color: Color(0xff005e56),
+                                //Color(0xff404c88),
                                 shape: BoxShape.circle,
                                 border: Border.all(width: 2,color: Color(0xff8794c8))
                             ),
-                            child: Icon(Icons.person,size: 8.h,color: Colors.white,),
+                            child: Icon(Icons.person,size: 7.5.h,color: Colors.white,),
                           ),
                           SizedBox(width: 5.w,),
                           Container(
                             height: 4.h,
                             width: 20.w,
                             decoration: BoxDecoration(
-                              color: Color(0xff6c78b3),
+                              color: Color(0xff005e56).withAlpha(200),
+                              //Color(0xff6c78b3),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Center(
@@ -110,7 +116,8 @@ class _AccountScreenState extends State<AccountScreen> {
                                         '3-days trail',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            color: Color(0xff7b7b7b),
+                                            color: Color(0xff005e56).withAlpha(200),
+                                            //Color(0xff7b7b7b),
                                             fontSize: 12.sp
                                         ),
                                       ),
@@ -141,11 +148,11 @@ class _AccountScreenState extends State<AccountScreen> {
                                       SizedBox(height: 1.h,),
                                       Text(
                                         '\$5.99',
-
                                         style: TextStyle(
                                           decoration: TextDecoration.lineThrough,
                                             //fontWeight: FontWeight.bold,
-                                            color: Color(0xff7b7b7b),
+                                            color: Color(0xff005e56).withAlpha(130),
+                                            //Color(0xff7b7b7b),
                                             fontSize: 9.sp
                                         ),
                                       ),
@@ -154,7 +161,8 @@ class _AccountScreenState extends State<AccountScreen> {
                                         'Quarterly',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            color: Color(0xff7b7b7b),
+                                            color: Color(0xff005e56).withAlpha(200),
+                                            //Color(0xff7b7b7b),
                                             fontSize: 12.sp
                                         ),
                                       ),
@@ -185,11 +193,11 @@ class _AccountScreenState extends State<AccountScreen> {
                                       SizedBox(height: 1.h,),
                                       Text(
                                         '\$23.99',
-
                                         style: TextStyle(
                                             decoration: TextDecoration.lineThrough,
                                             //fontWeight: FontWeight.bold,
-                                            color: Color(0xff7b7b7b),
+                                            color: Color(0xff005e56).withAlpha(130),
+                                            //Color(0xff7b7b7b),
                                             fontSize: 9.sp
                                         ),
                                       ),
@@ -198,7 +206,8 @@ class _AccountScreenState extends State<AccountScreen> {
                                         'Yearly',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            color: Color(0xff7b7b7b),
+                                            color: Color(0xff005e56).withAlpha(200),
+                                            //Color(0xff7b7b7b),
                                             fontSize: 12.sp
                                         ),
                                       ),
@@ -323,7 +332,8 @@ class _AccountScreenState extends State<AccountScreen> {
                       child: Text(
                         'premium features',
                         style: TextStyle(
-                          color: Color(0xffaab9de),
+                          color: Color(0xff005e56).withAlpha(100),
+                          //Color(0xffaab9de),
                           fontSize: 13.sp,
                           fontWeight: FontWeight.bold
                         ),
@@ -360,7 +370,7 @@ class _AccountScreenState extends State<AccountScreen> {
               color: Color(0xffeff1fc),
             ),
             child: Center(
-              child: Image(image: AssetImage(image!),height: 5.h,),
+              child: Image(image: AssetImage(image!),height: 5.h,color: appColor,),
             ),
           ),
           //SizedBox(height: 1.h,),
@@ -369,7 +379,8 @@ class _AccountScreenState extends State<AccountScreen> {
             child: Text(
               text!,
               style: TextStyle(
-                  color: Color(0xffadb4c5),
+                  color: Color(0xff005e56).withAlpha(120),
+                  //Color(0xffadb4c5),
                   fontSize: 12.sp,
                   fontWeight: FontWeight.bold
               ),

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../../global_widget/app_color.dart';
+
 class ScannerScreen extends StatefulWidget {
   const ScannerScreen({Key? key}) : super(key: key);
 
@@ -28,7 +30,8 @@ class _ScannerScreenState extends State<ScannerScreen> {
             Container(
               height: 60.h,
               decoration: BoxDecoration(
-                color: Color(0xff11192c),
+                color: Color(0xff005e56),
+                //Color(0xff11192c),
                 borderRadius: BorderRadius.only(topRight: Radius.circular(5),topLeft: Radius.circular(5)),
               ),
             ),
@@ -44,7 +47,8 @@ class _ScannerScreenState extends State<ScannerScreen> {
                     title: Text(
                       'Fingerprint',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: appColor,
+                        //Colors.black,
                         fontSize: 10.sp,
                       ),
                     ),
@@ -52,7 +56,8 @@ class _ScannerScreenState extends State<ScannerScreen> {
                       padding:  EdgeInsets.only(top: 4.h),
                       child: AdvancedSwitch(
                         controller: _controller,
-                        activeColor: Colors.green,
+                        activeColor: appColor,
+                        //Colors.green,
                         inactiveColor: Colors.grey,
                         width: 9.w,
                         height: 2.h,

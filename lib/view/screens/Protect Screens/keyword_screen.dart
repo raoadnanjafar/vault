@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
+
 class KeywordScreen extends StatefulWidget {
   const KeywordScreen({Key? key}) : super(key: key);
 
@@ -15,9 +17,11 @@ class _KeywordScreenState extends State<KeywordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff283a68),
+      backgroundColor: appColor,
+      //Color(0xff283a68),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -42,11 +46,17 @@ class _KeywordScreenState extends State<KeywordScreen> {
               child: Column(
                 children: [
                   ListTile(
-                    leading: Image(image: AssetImage('assets/kbbg.png'),width: 8.w,color: Color(0xff48568d)),
+                    leading: Image(
+                        image: AssetImage('assets/kbbg.png'),
+                        width: 8.w,
+                        color: appColor,
+                        //Color(0xff48568d)
+                    ),
                     title: Text(
                       'Random keyword',
                       style: TextStyle(
-                          color: Colors.black,
+                          color: appColor,
+                          //Colors.black,
                           fontSize: 12.sp,
                           fontWeight: FontWeight.bold
                       ),
@@ -60,7 +70,8 @@ class _KeywordScreenState extends State<KeywordScreen> {
                     ),
                     trailing: AdvancedSwitch(
                       controller: _controller,
-                      activeColor: Colors.green,
+                      activeColor: appColor,
+                      //Colors.green,
                       inactiveColor: Colors.grey,
                       width: 9.w,
                       height: 2.h,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:vault/view/screens/Theme%20Screen/themes_screen.dart';
 
+import '../../../global_widget/app_color.dart';
 import 'background_screen.dart';
 import 'installed_screen.dart';
 
@@ -20,7 +21,8 @@ class _ThemeScreenState extends State<ThemeScreen> {
       child: Scaffold(
         backgroundColor: Color(0xffe9eaef),
         appBar: AppBar(
-          backgroundColor: Color(0xff283a68),
+          backgroundColor: appColor,
+          //Color(0xff283a68),
           leading: GestureDetector(
               onTap: () {
                 Navigator.pop(context);

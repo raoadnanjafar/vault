@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import 'app_color.dart';
+
 void customIconDialog({String? image, String? text, BuildContext? context,}){
   showDialog(
     context: context!,
@@ -15,7 +17,12 @@ void customIconDialog({String? image, String? text, BuildContext? context,}){
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image(image: AssetImage('assets/maskbg.png'),color: Color(0xff49568d),height: 3.h),
+                Image(
+                    image: AssetImage('assets/maskbg.png'),
+                    color: appColor,
+                    //Color(0xff49568d),
+                    height: 3.h
+                ),
                 SizedBox(width: 14.h,),
                 GestureDetector(
                     onTap: () {
@@ -35,7 +42,8 @@ void customIconDialog({String? image, String? text, BuildContext? context,}){
                 child: Text(
                   'Disguise as $text',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: appColor,
+                      //Colors.black,
                       fontSize: 12.sp
                   ),
                 ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
+
 class SelfieScreen extends StatefulWidget {
   const SelfieScreen({Key? key}) : super(key: key);
 
@@ -17,7 +19,8 @@ class _SelfieScreenState extends State<SelfieScreen> {
     return Scaffold(
       backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -35,7 +38,12 @@ class _SelfieScreenState extends State<SelfieScreen> {
         actions: [
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 3.w),
-            child: Image(image: AssetImage('assets/brush.png'),color: Color(0xff49568d),height: 3.h,),
+            child: Image(
+              image: AssetImage('assets/brush.png'),
+              color: Colors.white,
+              //Color(0xff49568d),
+              height: 3.h,
+            ),
           ),
         ],
       ),
@@ -57,7 +65,12 @@ class _SelfieScreenState extends State<SelfieScreen> {
                             flex: 2,
                             child: Container(
                               child: Center(
-                                child: Image(image: AssetImage('assets/perrbg.png'),color: Color(0xff49568d),height: 3.5.h,),
+                                child: Image(
+                                  image: AssetImage('assets/perrbg.png'),
+                                  color: appColor,
+                                  //Color(0xff49568d),
+                                  height: 3.5.h,
+                                ),
                               ),
                             ),
                           ),
@@ -72,7 +85,8 @@ class _SelfieScreenState extends State<SelfieScreen> {
                                   Text(
                                     'Intruder record',
                                     style: TextStyle(
-                                        color: Colors.black,
+                                        color: appColor,
+                                        //Colors.black,
                                         fontSize: 11.sp
                                     ),
                                   ),
@@ -94,7 +108,8 @@ class _SelfieScreenState extends State<SelfieScreen> {
                               child: Center(
                                 child: AdvancedSwitch(
                                   controller: _controller,
-                                  activeColor: Colors.green,
+                                  activeColor: appColor,
+                                  //Colors.green,
                                   inactiveColor: Colors.grey,
                                   width: 9.w,
                                   height: 2.h,
@@ -117,13 +132,19 @@ class _SelfieScreenState extends State<SelfieScreen> {
                 children: [
                   Padding(
                     padding:  EdgeInsets.only(top: 22.h),
-                    child: Image(image: AssetImage('assets/perrbg.png'),color: Color(0xffafbdd2),height: 15.h,),
+                    child: Image(
+                      image: AssetImage('assets/perrbg.png'),
+                      color: appColor.withAlpha(100),
+                      //Color(0xffafbdd2),
+                      height: 15.h,
+                    ),
                   ),
                   SizedBox(height: 1.h,),
                   Text(
                     'Intruder selfie',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: appColor,
+                      //Colors.black,
                       fontSize: 13.sp
                     ),
                   ),

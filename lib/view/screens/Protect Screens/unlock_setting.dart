@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../global_widget/app_color.dart';
 import '../../../global_widget/global_widget.dart';
 
 class UnlockSetting extends StatefulWidget {
@@ -19,7 +20,8 @@ class _UnlockSettingState extends State<UnlockSetting> {
     return Scaffold(
       backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
-        backgroundColor: Color(0xff283a68),
+        backgroundColor: appColor,
+        //Color(0xff283a68),
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -54,12 +56,18 @@ class _UnlockSettingState extends State<UnlockSetting> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image(image: AssetImage('assets/pattern.png'),color: Colors.green,height: 2.7.h,),
+                        Image(
+                          image: AssetImage('assets/pattern.png'),
+                          color: appColor,
+                          //Colors.green,
+                          height: 2.7.h,
+                        ),
                         SizedBox(width: 3.w,),
                         Text(
                           'Pattern',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: appColor,
+                            //Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 13.sp
                           ),
@@ -112,7 +120,8 @@ class _UnlockSettingState extends State<UnlockSetting> {
                     child: Text(
                       'Options',
                       style: TextStyle(
-                          color: Colors.black,
+                          color: appColor,
+                          //Colors.black,
                           fontSize: 11.sp
                       ),
                     ),

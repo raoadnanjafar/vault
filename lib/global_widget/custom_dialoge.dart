@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import 'app_color.dart';
+
 void customDialogue({String? title,String? buttonText,BuildContext? context, String? content,String? image}){
   showDialog(
     context: context!,
@@ -20,7 +22,8 @@ void customDialogue({String? title,String? buttonText,BuildContext? context, Str
                 child: Text(
                   title!,
                   style: TextStyle(
-                      color: Colors.black,
+                      color: appColor,
+                      //Colors.black,
                       fontSize: 12.sp
                   ),
                 ),
