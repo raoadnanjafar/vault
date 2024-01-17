@@ -4,6 +4,7 @@ import 'package:vault/view/screens/Home%20Screen/privacy_screen.dart';
 import 'package:vault/view/screens/Home%20Screen/protect_screen.dart';
 
 import '../../../global_widget/app_color.dart';
+import '../Account Center/accont_screen.dart';
 import '../Account Center/account_screen.dart';
 import '../Setting Screen/setting_screen.dart';
 import '../Theme Screen/theme_screen.dart';
@@ -62,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountScreen(),));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountCenterScreen(),));
                           },
                           child: Padding(
                             padding:  EdgeInsets.only(top: 5.h,left: 4.w),
@@ -239,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 GestureDetector(
                                   onTap: () {
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountScreen(),));
+                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountCenterScreen(),));
                                   },
                                   child: Container(
                                     height: 3.h,

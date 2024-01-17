@@ -252,7 +252,17 @@ class _AccountScreenState extends State<AccountScreen> {
                               ),
                             ),
                           ),
-                        )
+                        ),
+                        Expanded(
+                            child: Padding(
+                              padding:  EdgeInsets.symmetric(horizontal: 4.w,vertical: 1.h),
+                              child: Text(
+                          'Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.',
+                                style: TextStyle(
+                                  color: Colors.grey
+                                ),
+                        ),
+                            ))
                       ],
                     ),
                   )
@@ -357,6 +367,7 @@ class _AccountScreenState extends State<AccountScreen> {
       ),
     );
   }
+
   Widget adsContainer({String? image, String? text}){
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: 4.w),
