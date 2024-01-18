@@ -71,8 +71,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       title: Text(
                         'Unlock All',
                         style: TextStyle(
-                          color: appColor,
-                          //Colors.black,
+                          color:
+                          //appColor,
+                          Colors.black,
                           fontSize: 12.sp
                         ),
                       ),
@@ -124,17 +125,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       title: Text(
                         'Guest',
                         style: TextStyle(
-                            color: appColor,
-                            //Colors.black,
+                            color:
+                            //appColor,
+                            Colors.black,
                             fontSize: 12.sp
                         ),
                       ),
-                      subtitle: Row(
-                        children: [
-                          Image(image: AssetImage('assets/playstore.png'),height: 2.h,),
-                          SizedBox(width: 2.w,),
-                          Image(image: AssetImage('assets/maps.png'),height: 2.h,),
-                        ],
+                      subtitle: Padding(
+                        padding:  EdgeInsets.only(top: 0.5.h),
+                        child: Row(
+                          children: [
+                            Image(image: AssetImage('assets/playstore.png'),height: 1.7.h,),
+                            SizedBox(width: 2.w,),
+                            Image(image: AssetImage('assets/maps.png'),height: 1.7.h,),
+                          ],
+                        ),
                       ),
                       trailing: Padding(
                         padding:  EdgeInsets.only(left: 8.w),

@@ -200,119 +200,242 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        body: Stack(
+        appBar: AppBar(
+          leading: GestureDetector(
+              onTap: () {
+                _scaffoldKey.currentState!.openDrawer();
+              },
+              child: Icon(Icons.dehaze_rounded,color: Colors.white,size: 3.h,)),
+          title:  Text(
+            'AppLock',
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 15.sp,
+                fontWeight: FontWeight.bold
+            ),
+          ),
+          actions: [
+            Padding(
+              padding:  EdgeInsets.only(right: 4.w),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountCenterScreen(),));
+                    },
+                    child: Container(
+                      height: 3.h,
+                      width: 5.w,
+                      //color: Color(0xff283a68),
+                      child: Image(
+                        image: AssetImage('assets/tajjjj.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 6.w,),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => ThemeScreen(),));
+                    },
+                    child: Container(
+                      height: 3.h,
+                      width: 5.w,
+                      //color: Color(0xff283a68),
+                      child: Image(
+                        image: AssetImage('assets/roborte.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+          backgroundColor: Color(0xff009688),
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(62.0),
+            child:  Container(
+              decoration: BoxDecoration(
+                color: Color(0xff009688),
+                // borderRadius: BorderRadius.only(
+                //   topLeft: Radius.circular(50),
+                //   topRight: Radius.circular(50),
+                // ),
+              ),
+              padding: EdgeInsets.only(top: 6.h, left: 4.w, right: 4.w, bottom: 0.7.h),
+              height: 12.h,
+              //width: 40.w,
+              child: TabBar(
+                labelColor: Colors.white,
+                indicatorSize: TabBarIndicatorSize.tab,
+                indicator: BoxDecoration(
+                    color: Color(0xff005e56).withAlpha(100), borderRadius: BorderRadius.circular(10)
+                ),
+                dividerColor: Color(0xff009688),
+                labelStyle: TextStyle(color: Colors.white),
+                unselectedLabelColor: Colors.black.withAlpha(100),
+                tabs: <Widget>[
+                  Tab(child: Text('Privacy', style: TextStyle(fontSize: 13.sp,fontWeight: FontWeight.bold))),
+                  Tab(child: Text('Protect', style: TextStyle(fontSize: 13.sp,fontWeight: FontWeight.bold))),
+                ],
+              ),
+            ),
+          ),
+        ),
+        body:
+        // Expanded(
+        //   child: Container(
+        //     child: TabBarView(
+        //       children: [
+        //         PrivacyScreen(),
+        //         ProtectScreen()
+        //       ],
+        //     ),
+        //   ),
+        // )
+
+        Stack(
           children: [
             Column(
               children: [
-                Container(
-                  height: 22.h,
-                  color: Color(0xff009688),
-                  //Color(0xff283a68),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 7.h,),
-                      Padding(
-                        padding:  EdgeInsets.symmetric(horizontal: 3.w),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    _scaffoldKey.currentState!.openDrawer();
-                                  },
-                                    child: Icon(Icons.dehaze_rounded,color: Colors.white,size: 3.h,)),
-                                SizedBox(width: 5.w,),
-                                Text(
-                                  'AppLock',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.bold
-                                  ),
-                                )
-                              ],
-                            ),
-
-
-                            Row(
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountCenterScreen(),));
-                                  },
-                                  child: Container(
-                                    height: 3.h,
-                                    width: 5.w,
-                                    //color: Color(0xff283a68),
-                                    child: Image(
-                                      image: AssetImage('assets/tajjjj.png'),
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(width: 6.w,),
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ThemeScreen(),));
-                                  },
-                                  child: Container(
-                                    height: 3.h,
-                                    width: 5.w,
-                                    //color: Color(0xff283a68),
-                                    child: Image(
-                                      image: AssetImage('assets/roborte.png'),
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 4.h,),
-                      Container(
-                         // height: 5.h,
-                         // width: 80.w,
-                        //color: Color(0xff283a68),
-                        child: TabBar(
-                          unselectedLabelColor: Colors.grey,
-                          indicatorColor: Colors.white,
-                          labelColor: Colors.white,
-                          //isScrollable: true,
-                          //indicatorWeight: 0.5.h,
-                          //indicatorColor: Colors.white,
-                          //controller: _controller,
-                          dividerColor: Color(0xff009688),
-                          //Color(0xff283a68),
-                          //unselectedLabelColor: Colors.grey.shade200,
-                         // labelPadding: EdgeInsets.only(right: 24.w,left: 18.w),
-                          //padding: EdgeInsets.only(left: 10.w),
-                          tabs: [
-                            Text(
-                              'Privacy',
-                              style: TextStyle(color: Colors.white,fontSize: 12.sp ),
-                            ),
-                            // Tab(
-                            //   text: 'Privacy',
-                            // ),
-                            // Tab(
-                            //   text: 'Protect',
-                            // ),
-                            Text(
-                              'Protect',
-                              style: TextStyle(color: Colors.white,fontSize: 12.sp ),
-                            )
-                          ],
-                        ),
-                      ),
-
-
-                    ],
-                  ),
-                ),
+                // Container(
+                //   height: 22.h,
+                //   color: Color(0xff009688),
+                //   //Color(0xff283a68),
+                //   child: Column(
+                //     children: [
+                //       SizedBox(height: 7.h,),
+                //       Padding(
+                //         padding:  EdgeInsets.symmetric(horizontal: 3.w),
+                //         child: Row(
+                //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //           children: [
+                //             Row(
+                //               children: [
+                //                 GestureDetector(
+                //                   onTap: () {
+                //                     _scaffoldKey.currentState!.openDrawer();
+                //                   },
+                //                     child: Icon(Icons.dehaze_rounded,color: Colors.white,size: 3.h,)),
+                //                 SizedBox(width: 5.w,),
+                //                 Text(
+                //                   'AppLock',
+                //                   style: TextStyle(
+                //                       color: Colors.white,
+                //                       fontSize: 15.sp,
+                //                       fontWeight: FontWeight.bold
+                //                   ),
+                //                 )
+                //               ],
+                //             ),
+                //             Row(
+                //               children: [
+                //                 GestureDetector(
+                //                   onTap: () {
+                //                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountCenterScreen(),));
+                //                   },
+                //                   child: Container(
+                //                     height: 3.h,
+                //                     width: 5.w,
+                //                     //color: Color(0xff283a68),
+                //                     child: Image(
+                //                       image: AssetImage('assets/tajjjj.png'),
+                //                       fit: BoxFit.cover,
+                //                     ),
+                //                   ),
+                //                 ),
+                //                 SizedBox(width: 6.w,),
+                //                 GestureDetector(
+                //                   onTap: () {
+                //                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => ThemeScreen(),));
+                //                   },
+                //                   child: Container(
+                //                     height: 3.h,
+                //                     width: 5.w,
+                //                     //color: Color(0xff283a68),
+                //                     child: Image(
+                //                       image: AssetImage('assets/roborte.png'),
+                //                       fit: BoxFit.cover,
+                //                     ),
+                //                   ),
+                //                 ),
+                //               ],
+                //             )
+                //           ],
+                //         ),
+                //       ),
+                //       //SizedBox(height: 4.h,),
+                //       // Container(
+                //       //    // height: 5.h,
+                //       //    // width: 80.w,
+                //       //   //color: Color(0xff283a68),
+                //       //   child: TabBar(
+                //       //     unselectedLabelColor: Colors.grey,
+                //       //     indicatorColor: Colors.white,
+                //       //     //indicatorWeight: 0.00000000001,
+                //       //     //indicatorSize: 0.2,
+                //       //     labelColor: Colors.white,
+                //       //     //isScrollable: true,
+                //       //     //indicatorWeight: 0.5.h,
+                //       //     //indicatorColor: Colors.white,
+                //       //     //controller: _controller,
+                //       //     dividerColor: Color(0xff009688),
+                //       //     //Color(0xff283a68),
+                //       //     //unselectedLabelColor: Colors.grey.shade200,
+                //       //    // labelPadding: EdgeInsets.only(right: 24.w,left: 18.w),
+                //       //     //padding: EdgeInsets.only(left: 10.w),
+                //       //     tabs: [
+                //       //       Text(
+                //       //         'Privacy',
+                //       //         style: TextStyle(color: Colors.white,fontSize: 12.sp ),
+                //       //       ),
+                //       //       // Tab(
+                //       //       //   text: 'Privacy',
+                //       //       // ),
+                //       //       // Tab(
+                //       //       //   text: 'Protect',
+                //       //       // ),
+                //       //       Text(
+                //       //         'Protect',
+                //       //         style: TextStyle(color: Colors.white,fontSize: 12.sp ),
+                //       //       )
+                //       //     ],
+                //       //   ),
+                //       // ),
+                //       Container(
+                //         decoration: BoxDecoration(
+                //           color: Color(0xff009688),
+                //           // borderRadius: BorderRadius.only(
+                //           //   topLeft: Radius.circular(50),
+                //           //   topRight: Radius.circular(50),
+                //           // ),
+                //         ),
+                //         padding: EdgeInsets.only(
+                //           top: 50,
+                //           left: 20,
+                //           right: 20,
+                //         ),
+                //         height: 10.h,
+                //         width: double.infinity,
+                //         child: TabBar(
+                //           indicator: BoxDecoration(
+                //               color: Colors.orange, borderRadius: BorderRadius.circular(20)
+                //           ),
+                //           dividerColor: Color(0xff009688),
+                //           labelStyle: TextStyle(color: Colors.white),
+                //           unselectedLabelColor: Colors.orange,
+                //           tabs: <Widget>[
+                //             Tab(child: Text('A', style: TextStyle(fontSize: 18.0))),
+                //             Tab(child: Text('B', style: TextStyle(fontSize: 18.0))),
+                //           ],
+                //         ),
+                //       )
+                //
+                //
+                //     ],
+                //   ),
+                // ),
                 Expanded(
                     child: TabBarView(
                       //controller: _controller,

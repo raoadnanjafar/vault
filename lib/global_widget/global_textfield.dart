@@ -24,7 +24,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
             hintText: widget.hintText,
             labelStyle: TextStyle(fontSize: 10.sp,color: Colors.grey),
-            hintStyle: TextStyle(fontSize: 10.sp,color: Colors.grey),
+            hintStyle: TextStyle(fontSize: 10.sp,color: Colors.grey.shade400),
             fillColor: Color(0xfff3f4f8),
             filled: true,
             suffixIcon: widget.suffixIcon,
