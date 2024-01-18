@@ -11,7 +11,7 @@ class AccountCenterScreen extends StatefulWidget {
 }
 
 class _AccountCenterScreenState extends State<AccountCenterScreen> {
-  int index = 0;
+  int index = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -49,12 +49,18 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CircleAvatar(
-                          child: Center(
-                            child: Icon(Icons.person,size: 7.5.h,color: Colors.white,),
+                        Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(width: 1,color: Colors.green.shade200)
                           ),
-                          radius: 30,
-                          backgroundColor: Color(0xff005e56),
+                          child: CircleAvatar(
+                            child: Center(
+                              child: Icon(Icons.person,size: 7.5.h,color: Colors.white,),
+                            ),
+                            radius: 30,
+                            backgroundColor: Color(0xff005e56),
+                          ),
                         ),
                         SizedBox(width: 5.w,),
                         Padding(
