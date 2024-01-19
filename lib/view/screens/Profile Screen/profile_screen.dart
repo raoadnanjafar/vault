@@ -49,132 +49,135 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              color: Colors.white,
-              width: double.infinity,
-              child: Column(
-                children: [
-                  SizedBox(height: 1.h,),
-                  GestureDetector(
-                    onTap: () {
-                      customDialogue(text: 'Unlock All');
-                    },
-                    child: ListTile(
-                      leading: Image(
-                        image: AssetImage('assets/unlock.png'),
-                        color: appColor,
-                        //Color(0xff49568d),
-                        height: 2.5.h,
+        child: Padding(
+          padding:  EdgeInsets.symmetric(horizontal: 4.w),
+          child: Column(
+            children: [
+              SizedBox(height: 2.h,),
+              GestureDetector(
+                onTap: () {
+                  customDialogue(text: 'Unlock All');
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(color: Colors.grey.shade300,width: 1),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: ListTile(
+                    leading: Image(
+                      image: AssetImage('assets/unlock.png'),
+                      color: appColor,
+                      //Color(0xff49568d),
+                      height: 2.5.h,
+                    ),
+                    title: Text(
+                      'Unlock All',
+                      style: TextStyle(
+                        color:
+                        //appColor,
+                        Colors.black,
+                        fontSize: 12.sp
                       ),
-                      title: Text(
-                        'Unlock All',
-                        style: TextStyle(
+                    ),
+                    subtitle: Text(
+                      'Click to unlock all apps.',
+                      style: TextStyle(
+                          color: Colors.grey.shade500,
+                          fontSize: 12.sp
+                      ),
+                    ),
+                    trailing: Padding(
+                      padding:  EdgeInsets.only(left: 4.w),
+                      child: PopupMenuButton(
+                        color: Colors.grey.shade400,
+
+                        itemBuilder: (context) => [
+                          PopupMenuItem(
+                              child: Text(
+                                'Shortcut',
+                                style: TextStyle(
+                                  fontSize: 10.sp,
+                                  color: Colors.black
+                                ),
+                              ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 1.h,),
+              GestureDetector(
+                onTap: () {
+                  customDialogue(text: 'Guest');
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(color: Colors.grey.shade300,width: 1),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: ListTile(
+                    leading: Image(
+                      image: AssetImage('assets/user.png'),
+                      color: appColor,
+                      //Color(0xff49568d),
+                      height: 2.5.h,
+                    ),
+                    title: Text(
+                      'Guest',
+                      style: TextStyle(
                           color:
                           //appColor,
                           Colors.black,
                           fontSize: 12.sp
-                        ),
-                      ),
-                      subtitle: Text(
-                        'Click to unlock all apps.',
-                        style: TextStyle(
-                            color: Colors.grey.shade500,
-                            fontSize: 12.sp
-                        ),
-                      ),
-                      trailing: Padding(
-                        padding:  EdgeInsets.only(left: 4.w),
-                        child: PopupMenuButton(
-                          color: Colors.grey.shade400,
-
-                          itemBuilder: (context) => [
-                            PopupMenuItem(
-                                child: Text(
-                                  'Shortcut',
-                                  style: TextStyle(
-                                    fontSize: 10.sp,
-                                    color: Colors.black
-                                  ),
-                                ),
-                            )
-                          ],
-                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.only(left: 15.w),
-                    child: Divider(
-                      thickness: 1,
-                      color: Colors.grey.shade300,
+                    subtitle: Padding(
+                      padding:  EdgeInsets.only(top: 0.5.h),
+                      child: Row(
+                        children: [
+                          Image(image: AssetImage('assets/playstore.png'),height: 1.7.h,),
+                          SizedBox(width: 2.w,),
+                          Image(image: AssetImage('assets/maps.png'),height: 1.7.h,),
+                        ],
+                      ),
                     ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      customDialogue(text: 'Guest');
-                    },
-                    child: ListTile(
-                      leading: Image(
-                        image: AssetImage('assets/user.png'),
-                        color: appColor,
-                        //Color(0xff49568d),
-                        height: 2.5.h,
-                      ),
-                      title: Text(
-                        'Guest',
-                        style: TextStyle(
-                            color:
-                            //appColor,
-                            Colors.black,
-                            fontSize: 12.sp
-                        ),
-                      ),
-                      subtitle: Padding(
-                        padding:  EdgeInsets.only(top: 0.5.h),
-                        child: Row(
-                          children: [
-                            Image(image: AssetImage('assets/playstore.png'),height: 1.7.h,),
-                            SizedBox(width: 2.w,),
-                            Image(image: AssetImage('assets/maps.png'),height: 1.7.h,),
-                          ],
-                        ),
-                      ),
-                      trailing: Padding(
-                        padding:  EdgeInsets.only(left: 8.w),
-                        child: PopupMenuButton(
-                          color: Colors.grey.shade400,
-                          //shadowColor: Colors.grey.shade200,
-                          surfaceTintColor: Colors.white,
-                          itemBuilder: (context) => [
-                            PopupMenuItem(
-                              child: Text(
-                                'Shortcut',
-                                style: TextStyle(
-                                    fontSize: 10.sp,
-                                    color: Colors.black
-                                ),
+                    trailing: Padding(
+                      padding:  EdgeInsets.only(left: 8.w),
+                      child: PopupMenuButton(
+                        color: Colors.grey.shade400,
+                        //shadowColor: Colors.grey.shade200,
+                        surfaceTintColor: Colors.white,
+                        itemBuilder: (context) => [
+                          PopupMenuItem(
+                            child: Text(
+                              'Shortcut',
+                              style: TextStyle(
+                                  fontSize: 10.sp,
+                                  color: Colors.black
                               ),
                             ),
-                            PopupMenuItem(
-                              child: Text(
-                                'Edit',
-                                style: TextStyle(
-                                    fontSize: 10.sp,
-                                    color: Colors.black
-                                ),
+                          ),
+                          PopupMenuItem(
+                            child: Text(
+                              'Edit',
+                              style: TextStyle(
+                                  fontSize: 10.sp,
+                                  color: Colors.black
                               ),
-                            )
-                          ],
-                        ),
+                            ),
+                          )
+                        ],
                       ),
                     ),
                   ),
-                ],
-              ),
-            )
-          ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(

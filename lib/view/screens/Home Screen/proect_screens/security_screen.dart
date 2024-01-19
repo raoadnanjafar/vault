@@ -41,50 +41,54 @@ class _SecurityScreensState extends State<SecurityScreens> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              color: Colors.white,
-              child: Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => UnlockSetting(),));
-                    },
-                    child: securityContainer(
-                        image: 'assets/unlockbg.png',
-                        title: 'Unlock Settings',
-                        subtitle: 'Unlock mode: Pattern Lock'
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SecuritySettingScreen(),));
-                    },
-                    child: securityContainer(
-                        image: 'assets/locbg.png',
-                        title: 'Security Settings',
-                        subtitle: 'Update security email and question'
-                    ),
-                  ),
-                  recommendContainer(
-                      image: 'assets/fingerbg.png',
-                      title: 'Use fingerprint',
-                      controller: _controllerFinger
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SelfieScreen(),));
-                    },
-                    child: securityContainer(
-                        image: 'assets/perrbg.png',
-                        title: 'Intruder Selfie',
-                        subtitle: 'Take a photo of intruders'
-                    ),
-                  ),
-                  SizedBox(height: 2.h,)
-                ],
+            SizedBox(height: 2.h,),
+            //SizedBox(height: 2.h,),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 3.5.w),
+              child: Text(
+                  'Security'
               ),
-            )
+            ),
+            SizedBox(height: 1.5.h,),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => UnlockSetting(),));
+              },
+              child: securityContainer(
+                  image: 'assets/unlockbg.png',
+                  title: 'Unlock Settings',
+                  subtitle: 'Unlock mode: Pattern Lock'
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SecuritySettingScreen(),));
+              },
+              child: securityContainer(
+                  image: 'assets/locbg.png',
+                  title: 'Security Settings',
+                  subtitle: 'Update security email and question'
+              ),
+            ),
+            recommendContainer(
+                image: 'assets/fingerbg.png',
+                title: 'Use fingerprint',
+                subtitle: 'Use your fingerprint',
+                controller: _controllerFinger
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SelfieScreen(),));
+              },
+              child: securityContainer(
+                  image: 'assets/perrbg.png',
+                  title: 'Intruder Selfie',
+                  subtitle: 'Take a photo of intruders'
+              ),
+            ),
+            SizedBox(height: 2.h,)
           ],
         ),
       ),

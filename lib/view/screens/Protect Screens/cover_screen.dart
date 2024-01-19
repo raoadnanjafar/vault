@@ -50,36 +50,44 @@ class _CoverScreenState extends State<CoverScreen> {
         children: [
           Column(
             children: [
-              Container(
-                color: Colors.white,
-                width: double.infinity,
-                child: Column(
-                  children: [
-                    ListTile(
-                      leading: Image(
-                        image: AssetImage('assets/eyesbg.png'),
-                        width: 6.w,
-                        color: appColor,
-                        //Color(0xff48568d),
-                      ),
-                      title: Text(
-                        'Cover',
-                        style: TextStyle(
+              SizedBox(height: 2.h,),
+              Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 5.w),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(color: Colors.grey.shade300,width: 1),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  width: double.infinity,
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: Image(
+                          image: AssetImage('assets/eyesbg.png'),
+                          width: 6.w,
                           color: appColor,
-                          //Colors.black,
-                          fontSize: 12.sp,
-                          //fontWeight: FontWeight.bold
+                          //Color(0xff48568d),
                         ),
-                      ),
-                      subtitle: Text(
-                        'Apply cover to improve security.',
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 10.sp
+                        title: Text(
+                          'Cover',
+                          style: TextStyle(
+                            color: appColor,
+                            //Colors.black,
+                            fontSize: 12.sp,
+                            //fontWeight: FontWeight.bold
+                          ),
                         ),
-                      ),
-                    )
-                  ],
+                        subtitle: Text(
+                          'Apply cover to improve security.',
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 10.sp
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: 2.h,),

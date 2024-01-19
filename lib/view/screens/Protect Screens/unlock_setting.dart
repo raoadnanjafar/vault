@@ -39,6 +39,7 @@ class _UnlockSettingState extends State<UnlockSetting> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 2.h,),
             Row(
@@ -106,48 +107,38 @@ class _UnlockSettingState extends State<UnlockSetting> {
               ],
             ),
             SizedBox(height: 2.h,),
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(width: 1,color: Colors.grey.shade200)
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 1.h,),
-                  Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: 3.w),
-                    child: Text(
-                      'Options',
-                      style: TextStyle(
-                          color: appColor,
-                          //Colors.black,
-                          fontSize: 11.sp
-                      ),
-                    ),
-                  ),
-                  recommendContainer(
-                      image: 'assets/unlockpat.png',
-                      title: 'Change unlock pattern',
-                      subtitle: 'Click to change unlock pattern',
-                     // controller: _controller
-                  ),
-                  recommendContainer(
-                      image: 'assets/unlockpat.png',
-                      title: 'Make pattern visible',
-                      subtitle: 'Show the pattern when drawing',
-                      controller: _controller
-                  ),
-                  recommendContainer(
-                      image: 'assets/vibrate.png',
-                      title: 'Touch vibrate',
-                      subtitle: 'Vibrate when draw pattern/input password',
-                      controller: _controllerVibrate
-                  ),
-                  SizedBox(height: 2.h,)
-                ],
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 3.w),
+              child: Text(
+                'Options',
+                style: TextStyle(
+                    color:
+                    //appColor,
+                    Colors.black,
+                    fontSize: 11.sp
+                ),
               ),
             ),
+            SizedBox(height: 1.5.h,),
+            recommendContainer(
+                image: 'assets/unlockpat.png',
+                title: 'Change unlock pattern',
+                subtitle: 'Click to change unlock pattern',
+               // controller: _controller
+            ),
+            recommendContainer(
+                image: 'assets/unlockpat.png',
+                title: 'Make pattern visible',
+                subtitle: 'Show the pattern when drawing',
+                controller: _controller
+            ),
+            recommendContainer(
+                image: 'assets/vibrate.png',
+                title: 'Touch vibrate',
+                subtitle: 'Vibrate when draw pattern/input password',
+                controller: _controllerVibrate
+            ),
+            SizedBox(height: 2.h,),
           ],
         ),
       ),

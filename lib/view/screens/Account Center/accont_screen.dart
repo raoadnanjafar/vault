@@ -92,57 +92,79 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
                 ],
               ),
             ),
+            SizedBox(height: 2.h,),
+            Center(
+              child: Text(
+                'premium features',
+                style: TextStyle(
+                    color: Color(0xff005e56).withAlpha(100),
+                    //Color(0xffaab9de),
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+            ),
+            SizedBox(height: 2.h,),
             Container(
-              height: 29.h,
-              child: Stack(
+              child: Row(
                 children: [
-                  Container(
-                    height: 4.h,
-                    color: appColor,
-                  ),
-                  Container(
-                    height: 14.h,
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: 4.w),
-                    child: Container(
-                      //height: 30.h,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(color: Colors.grey.shade300,width: 1)
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          SizedBox(height: 1.h,),
-                          Center(
-                            child: Text(
-                              'premium features',
-                              style: TextStyle(
-                                  color: Color(0xff005e56).withAlpha(100),
-                                  //Color(0xffaab9de),
-                                  fontSize: 13.sp,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          ),
-                          //SizedBox(height: 2.h,),
-                          Row(
-                            children: [
-                              adsContainer(image: 'assets/noadds.png',text: 'No Ads'),
-                              adsContainer(image: 'assets/shirtbg.png',text: 'Paid Themes'),
-                              adsContainer(image: 'assets/fbbg.png',text: 'VIP Feedback'),
-
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  )
+                  addsCard(image: 'assets/noadds.png',text: 'No Ads'),
+                  addsCard(image: 'assets/shirtbg.png',text: 'Paid Themes'),
+                  addsCard(image: 'assets/fbbg.png',text: 'VIP Feedback'),
                 ],
               ),
             ),
+            // Container(
+            //   height: 29.h,
+            //   child: Stack(
+            //     children: [
+            //       Container(
+            //         height: 4.h,
+            //         color: appColor,
+            //       ),
+            //       Container(
+            //         height: 14.h,
+            //       ),
+            //       Padding(
+            //         padding:  EdgeInsets.symmetric(horizontal: 4.w),
+            //         child: Container(
+            //           //height: 30.h,
+            //           decoration: BoxDecoration(
+            //               color: Colors.white,
+            //               borderRadius: BorderRadius.circular(5),
+            //               border: Border.all(color: Colors.grey.shade300,width: 1)
+            //           ),
+            //           child: Column(
+            //             mainAxisAlignment: MainAxisAlignment.start,
+            //             children: [
+            //               SizedBox(height: 1.h,),
+            //               Center(
+            //                 child: Text(
+            //                   'premium features',
+            //                   style: TextStyle(
+            //                       color: Color(0xff005e56).withAlpha(100),
+            //                       //Color(0xffaab9de),
+            //                       fontSize: 13.sp,
+            //                       fontWeight: FontWeight.bold
+            //                   ),
+            //                 ),
+            //               ),
+            //               //SizedBox(height: 2.h,),
+            //               Row(
+            //                 children: [
+            //                   adsContainer(image: 'assets/noadds.png',text: 'No Ads'),
+            //                   adsContainer(image: 'assets/shirtbg.png',text: 'Paid Themes'),
+            //                   adsContainer(image: 'assets/fbbg.png',text: 'VIP Feedback'),
+            //
+            //                 ],
+            //               )
+            //             ],
+            //           ),
+            //         ),
+            //       )
+            //     ],
+            //   ),
+            // ),
             SizedBox(height: 2.h,),
             Container(
               height: 22.h,
@@ -165,7 +187,12 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
                               width: 28.w,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(width:index==1?2: 1,color: index==1 ? Color(0xfff97a2a) : Colors.grey.shade300)
+                                  border: Border.all(
+                                      width:index==1?2: 1,
+                                      color: index==1 ?
+                                          appColor
+                                      //Color(0xfff97a2a)
+                                          : Colors.grey.shade300)
                               ),
                               child: Center(
                                 child: Column(
@@ -207,7 +234,12 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
                               width: 28.w,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(width:index==2?2: 1,color: index==2 ? Color(0xfff97a2a) : Colors.grey.shade300)
+                                  border: Border.all(
+                                      width:index==2?2: 1,
+                                      color: index==2 ?
+                                          appColor
+                                      //Color(0xfff97a2a)
+                                          : Colors.grey.shade300)
                               ),
                               child: Center(
                                 child: Column(
@@ -260,7 +292,12 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
                               width: 28.w,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(width:index==3?2: 1,color: index==3 ? Color(0xfff97a2a) : Colors.grey.shade300)
+                                  border: Border.all(
+                                      width:index == 3 ? 2 : 1,
+                                      color: index==3 ?
+                                          appColor
+                                      //Color(0xfff97a2a)
+                                          : Colors.grey.shade300)
                               ),
                               child: Center(
                                 child: Column(
@@ -307,13 +344,19 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
                   Positioned(
                     top: 0,
                     left: 23.w,
-                    child: Image(image: AssetImage('assets/recbg.png'),height: 3.h,color: Color(0xfff97a2a),),),
+                    child: Image(
+                      image: AssetImage('assets/recbg.png'),
+                      height: 3.h,
+                      color: appColor,
+                      //Color(0xfff97a2a),
+                    ),),
                   Positioned(
                     top: 0,
                     left: 51.w,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xfff97a2a),
+                        color: appColor,
+                        //Color(0xfff97a2a),
                         borderRadius: BorderRadius.circular(3),
                       ),
                       child: Center(
@@ -338,7 +381,8 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
                     left: 83.w,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xfff97a2a),
+                        color: appColor,
+                        //Color(0xfff97a2a),
                         borderRadius: BorderRadius.circular(3),
                       ),
                       child: Center(
@@ -366,7 +410,8 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
               padding:  EdgeInsets.symmetric(horizontal: 4.w),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Color(0xfff97a2a),
+                  color: appColor,
+                  //Color(0xfff97a2a),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Center(
@@ -441,6 +486,62 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
           )
         ],
       ),
+    );
+  }
+
+  Widget addsCard({String? image, Color? color, String? text}){
+    return Row(
+      children: [
+        SizedBox(width: 3.5.w,),
+        Padding(
+          padding:  EdgeInsets.all(1.0),
+          child: Material(
+            elevation: 1,
+            child: Container(
+              height: 10.h,
+              width: 28.w,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                //color,
+                //Color(0xffff7767),
+                border: Border.all(width: 1,color: Colors.grey.shade200,),
+                //shape: BoxShape.circle
+              ),
+              child: Center(
+                child: Column(
+                  children: [
+                    SizedBox(height: 1.h,),
+                    Container(
+                      height: 5.5.h,
+                      width: 17.w,
+                      // decoration: BoxDecoration(
+                      //     color: Colors.white,
+                      //     //color,
+                      //     //Color(0xffff7767),
+                      //     border: Border.all(width: 1,color: Colors.grey.shade200,),
+                      //     //shape: BoxShape.circle
+                      // ),
+                      child: Center(
+                        child: Image(image: AssetImage(image!),height: 4.h,color: appColor,),
+                      ),
+                    ),
+                    //SizedBox(height: 2.h,),
+                    Text(
+                      text!,
+                      style: TextStyle(
+                          color: appColor,
+                          //Colors.black,
+                          fontSize: 10.sp
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
+            ),
+          ),
+        )
+      ],
     );
   }
 

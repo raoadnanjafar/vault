@@ -57,7 +57,7 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 1.h,),
+            SizedBox(height: 1.5.h,),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 4.w),
               child: Row(
@@ -69,7 +69,7 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
                         'Recommended',
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 10.sp
+                            fontSize: 12.sp
                         ),
                       ),
                       SizedBox(width: 2.w,),
@@ -108,36 +108,46 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 1.h,),
-            Divider(
-              thickness: 1,
-              color: Colors.grey.shade400,
-            ),
-            ListTile(
-              leading: Image(image: AssetImage('assets/settings.png'),height: 3.h,),
-              title: Text(
-                'Setting',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12.sp
-                ),
-              ),
-              subtitle: Text(
-                'Prevent uninstalling or force-stop application.',
-                style: TextStyle(
-                    color: Colors.grey.shade500,
-                    fontSize: 9.sp
-                ),
-              ),
-              trailing: Icon(Icons.lock,color: Colors.grey.shade400,),
-            ),
+             SizedBox(height: 1.h,),
+            // Divider(
+            //   thickness: 1,
+            //   color: Colors.grey.shade400,
+            // ),
             Padding(
-              padding:  EdgeInsets.only(left: 15.w),
-              child: Divider(
-                thickness: 1,
-                color: Colors.grey.shade400,
+              padding:  EdgeInsets.symmetric(horizontal: 4.w),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey.shade300,width: 1),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: ListTile(
+                  leading: Image(image: AssetImage('assets/settings.png'),height: 3.h,),
+                  title: Text(
+                    'Setting',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12.sp
+                    ),
+                  ),
+                  subtitle: Text(
+                    'Prevent uninstalling or force-stop application.',
+                    style: TextStyle(
+                        color: Colors.grey.shade500,
+                        fontSize: 9.sp
+                    ),
+                  ),
+                  trailing: Icon(Icons.lock,color: Colors.grey.shade400,),
+                ),
               ),
             ),
+            // Padding(
+            //   padding:  EdgeInsets.only(left: 15.w),
+            //   child: Divider(
+            //     thickness: 1,
+            //     color: Colors.grey.shade400,
+            //   ),
+            // ),
           ],
         ),
       ),

@@ -44,54 +44,57 @@ class _MagicScreenState extends State<MagicScreen> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              color: Colors.white,
-              child: Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => IconScreen(),));
-                    },
-                    child: recommendContainer(
-                        image: 'assets/maskbg.png',
-                        title: 'Icon Camouflage',
-                        subtitle: 'Disguise the AppLock icon as another icon',
-                        controller: _controllerIcon
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => KeywordScreen(),));
-                    },
-                    child: recommendContainer(
-                        image: 'assets/kbbg.png',
-                        title: 'Random Keyboard',
-                        subtitle: 'Numeric keyboard is randomly\narrange to prevent others form\npeeping to ensure password security ',
-                        controller: _controllerKey
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => CoverScreen(),));
-                    },
-                    child: recommendContainer(
-                        image: 'assets/eyesbg.png',
-                        title: 'Cover',
-                        subtitle: 'Apply cover to improve security',
-                        controller: _controllerCover
-                    ),
-                  ),
-                  recommendContainer(
-                      image: 'assets/booksbg.png',
-                      title: 'Animation',
-                      subtitle: 'Show random animations when unlocking apps',
-                      controller: _controllerAnim
-                  ),
-                  SizedBox(height: 2.h,)
-                ],
+            SizedBox(height: 2.h,),
+            //SizedBox(height: 2.h,),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 3.5.w),
+              child: Text(
+                  'Magic'
               ),
-            )
+            ),
+            SizedBox(height: 1.5.h,),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => IconScreen(),));
+              },
+              child: recommendContainer(
+                  image: 'assets/maskbg.png',
+                  title: 'Icon Camouflage',
+                  subtitle: 'Disguise the AppLock icon as another icon',
+                  controller: _controllerIcon
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => KeywordScreen(),));
+              },
+              child: recommendContainer(
+                  image: 'assets/kbbg.png',
+                  title: 'Random Keyboard',
+                  subtitle: 'Numeric keyboard is randomly\narrange to prevent others form\npeeping to ensure password security ',
+                  controller: _controllerKey
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CoverScreen(),));
+              },
+              child: recommendContainer(
+                  image: 'assets/eyesbg.png',
+                  title: 'Cover',
+                  subtitle: 'Apply cover to improve security',
+                  controller: _controllerCover
+              ),
+            ),
+            recommendContainer(
+                image: 'assets/booksbg.png',
+                title: 'Animation',
+                subtitle: 'Show random animations when unlocking apps',
+                controller: _controllerAnim
+            ),
+            SizedBox(height: 2.h,)
           ],
         ),
       ),
