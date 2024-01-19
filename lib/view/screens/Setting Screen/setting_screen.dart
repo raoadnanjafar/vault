@@ -29,7 +29,7 @@ class _SettingScreenState extends State<SettingScreen> {
             },
             child: Icon(Icons.arrow_back,color: Colors.white,size: 7.w,)),
         title: Text(
-          'Setting',
+          'Settings',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16.sp,
