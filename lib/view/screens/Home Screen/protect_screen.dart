@@ -43,7 +43,7 @@ class _ProtectScreenState extends State<ProtectScreen> {
                 height: 8.h,
                 //index == 1 &&  isSelected==true? 55.h : 8.h,
                 decoration: BoxDecoration(
-                    //color: Colors.white,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(5),
                     border: Border.all(color: Colors.grey.shade300,width: 0.5)
                 ),
@@ -136,7 +136,7 @@ class _ProtectScreenState extends State<ProtectScreen> {
               ),
             ),
           ),
-          SizedBox(height: 2.h,),
+          SizedBox(height: 1.h,),
           GestureDetector(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => SecurityScreens(),));
@@ -147,7 +147,7 @@ class _ProtectScreenState extends State<ProtectScreen> {
                 height: 8.h,
                 //index == 2&& isSelected==true ? 48.h : 8.h,
                 decoration: BoxDecoration(
-                    //color: Colors.white,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(5),
                     border: Border.all(color: Colors.grey.shade300,width: 0.5)
                 ),
@@ -224,7 +224,7 @@ class _ProtectScreenState extends State<ProtectScreen> {
               ),
             ),
           ),
-          SizedBox(height: 2.h,),
+          SizedBox(height: 1.h,),
           GestureDetector(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => MagicScreen(),));
@@ -235,7 +235,7 @@ class _ProtectScreenState extends State<ProtectScreen> {
                 height: 8.h,
                 //index == 3&& isSelected==true ? 62.h : 8.h,
                 decoration: BoxDecoration(
-                    //color: Colors.white,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(5),
                     border: Border.all(color: Colors.grey.shade300,width: 0.5)
                 ),

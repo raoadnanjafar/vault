@@ -35,12 +35,12 @@ class _CoverScreenState extends State<CoverScreen> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(Icons.arrow_back,color: Colors.white,size: 7.w,)),
+            child: Icon(Icons.arrow_back,color: Colors.white,size: 6.w,)),
         title: Text(
           'Cover',
           style: TextStyle(
               color: Colors.white,
-              fontSize: 16.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.bold
           ),
         ),

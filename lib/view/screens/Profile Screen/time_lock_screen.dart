@@ -29,12 +29,12 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(Icons.arrow_back,color: Colors.white,size: 7.w,)),
+            child: Icon(Icons.arrow_back,color: Colors.white,size: 6.w,)),
         title: Text(
           'Time Lock',
           style: TextStyle(
               color: Colors.white,
-              fontSize: 16.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.bold
           ),
         ),

@@ -21,18 +21,19 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffe9eaef),
       appBar: AppBar(
         backgroundColor: appColor,
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(Icons.arrow_back,color: Colors.white,size: 7.w,)),
+            child: Icon(Icons.arrow_back,color: Colors.white,size: 6.w,)),
         title: Text(
           'Settings',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 16.sp,
+            fontSize: 14.sp,
             fontWeight: FontWeight.bold
           ),
         ),
@@ -51,7 +52,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 child: Container(
                   height: 8.h,
                   decoration: BoxDecoration(
-                    //color: Colors.white,
+                    color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(color: Colors.grey.shade300,width: 0.5)
                   ),
@@ -89,7 +90,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 2.h,),
+            SizedBox(height: 1.h,),
             GestureDetector(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => AdvanceSettingScreen(),));
@@ -99,7 +100,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 child: Container(
                   height: 8.h,
                   decoration: BoxDecoration(
-                    //color: Colors.white,
+                    color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(color: Colors.grey.shade300,width: 0.5)
                   ),

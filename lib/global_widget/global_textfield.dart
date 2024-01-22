@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import 'app_color.dart';
+
 class CustomTextField extends StatefulWidget {
   String? hintText;
   TextEditingController? controller;
@@ -28,6 +30,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             fillColor: Color(0xfff3f4f8),
             filled: true,
             suffixIcon: widget.suffixIcon,
+            suffixIconColor: appColor,
+            //iconColor: appColor,
             contentPadding: EdgeInsets.only(left: 2.w,right: 2.w,bottom: 1.5.h),
             disabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,

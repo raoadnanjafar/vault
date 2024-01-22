@@ -24,12 +24,12 @@ class _AccountCenterScreenState extends State<AccountCenterScreen> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(Icons.arrow_back,color: Colors.white,size: 3.h,)),
+            child: Icon(Icons.arrow_back,color: Colors.white,size: 6.w,)),
         title: Text(
           'Account Center',
           style: TextStyle(
               color: Colors.white,
-              fontSize: 15.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.bold
           ),
         ),

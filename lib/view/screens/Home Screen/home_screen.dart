@@ -31,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        backgroundColor: Color(0xffe9eaef),
         key: _scaffoldKey,
         drawer: Drawer(
           width: 85.w,

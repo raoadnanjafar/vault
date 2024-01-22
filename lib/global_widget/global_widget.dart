@@ -189,7 +189,7 @@ Widget privacyListTile({
   return Column(
     children: [
       Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 5.w),
+        padding:  EdgeInsets.symmetric(horizontal: 3.w),
         child: Container(
           // height: 10.h,
           decoration: BoxDecoration(

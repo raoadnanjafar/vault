@@ -28,7 +28,7 @@ class _NotificationBarScreenState extends State<NotificationBarScreen> {
             },
             child: Icon(Icons.arrow_back,color: Colors.white,size: 6.w,)),
         title: Text(
-          'Notifications',
+          'Notification Bar',
           style: TextStyle(
               color: Colors.white,
               fontSize: 14.sp,

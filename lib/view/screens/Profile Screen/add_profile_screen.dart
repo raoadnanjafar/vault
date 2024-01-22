@@ -23,7 +23,7 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(Icons.arrow_back,color: Colors.white,size: 7.w,)),
+            child: Icon(Icons.arrow_back,color: Colors.white,size: 6.w,)),
         title: Container(
           height: 5.h,
           decoration: BoxDecoration(
