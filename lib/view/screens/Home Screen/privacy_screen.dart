@@ -6,6 +6,7 @@ import 'package:vault/view/screens/Home%20Screen/privacy_screens/privacy_recomme
 import '../../../global_widget/app_color.dart';
 import '../../../global_widget/global_widget.dart';
 import '../Profile Screen/profile_screen.dart';
+import '../Vault Screen/vault_screen.dart';
 
 class PrivacyScreen extends StatefulWidget {
   const PrivacyScreen({Key? key}) : super(key: key);
@@ -59,7 +60,11 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                   SizedBox(height: 2.h,),
                   Row(
                     children: [
-                      privacyContainer(color: Color(0xffff7767),text: 'Vault',image: 'assets/cameraabg.png'),
+                      GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => VaultScreen(),));
+                          },
+                          child: privacyContainer(color: Color(0xffff7767),text: 'Vault',image: 'assets/cameraabg.png')),
                       privacyContainer(color: Color(0xff09b7ee),text: 'Browser',image: 'assets/browbg.png'),
                     ],
                   ),

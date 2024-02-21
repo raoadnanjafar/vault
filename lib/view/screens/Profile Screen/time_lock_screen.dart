@@ -25,6 +25,7 @@ class _TimeLockScreenState extends State<TimeLockScreen> {
       appBar: AppBar(
         backgroundColor: appColor,
         //Color(0xff283a68),
+
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
