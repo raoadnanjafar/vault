@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
+import 'package:vault/view/screens/Vault%20Screen/audio_screen.dart';
 import 'package:vault/view/screens/Vault%20Screen/photo_screen.dart';
 import 'package:vault/view/screens/Vault%20Screen/video_screen.dart';
 
@@ -125,7 +126,13 @@ class _VaultScreenState extends State<VaultScreen> {
               SizedBox(height: 2.h,),
               Row(
                 children: [
-                  vaultContainer(image: 'assets/hphon.png',text: 'Audio'),
+                  vaultContainer(
+                      image: 'assets/hphon.png'
+                      ,text: 'Audio',
+                  ontap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => AudioScreen(),));
+                  },
+                  ),
                   SizedBox(width: 3.w,),
                   vaultContainer(image: 'assets/file.png',text: 'File'),
                 ],
